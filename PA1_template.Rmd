@@ -1,5 +1,10 @@
+---
+output:
+  html_document:
+    keep_md: yes
+---
 # Reproducible Research: Peer Assessment 1
-```{r setoptions, echo=TRUE, fig.width=20, fig.height=5}
+```{r setoptions, echo=TRUE, fig.width=20, fig.height=5, fig.path="./figures/"}
 if(require("knitr")){
     print("knitr is loaded correctly")
 } else {
@@ -11,7 +16,7 @@ if(require("knitr")){
         stop("could not install knitr")
     }
 }
-opts_chunk$set(echo = TRUE, fig.width = 10, fig.height = 5)
+opts_chunk$set(echo = TRUE, fig.width = 10, fig.height = 5, fig.path="./figures/")
 ```
 
 ## Loading and preprocessing the data
@@ -121,7 +126,7 @@ activityFilled$steps[NAIndice] <- sapply(activity$interval[NAIndice], function(x
 ```
 
 With the NA values filled, we now replot the histogram of the average number of steps taken each day.
-```{r NAFilledReplot}
+```{r meanTotalNumberOfStepsTakenPerDayNaFilled}
 # New melt
 activityFilledMolten <- melt(activityFilled, 
                              id = c("date", "interval"), 
