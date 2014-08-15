@@ -155,7 +155,7 @@ activityFilledMoltenTotalStepsPerDayMedian <-
         median(activityFilledMoltenTotalStepsPerDay$steps, na.rm = TRUE)
 ```
 
-| dataset | mean | median |
+| Total number of steps taken per day | mean | median |
 | :--- | :--- | :--- |
 | With NA | `r sprintf("%.2f", activityMoltenTotalStepsPerDayMean)` | `r sprintf("%.2f", activityMoltenTotalStepsPerDayMedian)` |
 | With NA filled | `r sprintf("%.2f", activityFilledMoltenTotalStepsPerDayMean)` | `r sprintf("%.2f", activityFilledMoltenTotalStepsPerDayMedian)` |
